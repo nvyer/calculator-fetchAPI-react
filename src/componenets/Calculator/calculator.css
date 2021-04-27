@@ -1,0 +1,32 @@
+.input {
+    display: inline-block;
+    width: 70px;
+    height: 40px;
+    margin-left: 10px;
+    font-size: 40px;
+}
+
+.btn-container {
+    display: block;
+    margin-top: 20px;
+}
+
+.btn {
+    margin-left: 20px;
+    text-align: center;
+    height: 24px;
+    width: 24px;
+}
+
+.result {
+    text-align: center;
+    width: 200px;
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.reset-btn {
+    margin-left: 75px;
+    width: 53px;
+    height: 22px;
+}

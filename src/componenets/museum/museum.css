@@ -1,0 +1,49 @@
+.main-div {
+    background-color: #c5bcb0;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 326px;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: white;
+    border: 10px solid #b4b5b8;
+    margin-left: 15px;
+}
+
+.images {
+    margin-top: 23px;
+    overflow:scroll;
+}
+
+.loader {
+    font-size: 30px;
+    color: #f7f7f7;
+    letter-spacing: 3px;
+}
+
+.load-more-btn {
+    height: 39px;
+    width: 111px;
+    margin-right:30px;
+    font-size:17px;
+    cursor:pointer
+}
+
+.load-more-container{
+    text-align: end;
+    padding:30px
+}
+.select {
+    height: 20px;
+}
