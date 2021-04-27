@@ -8,8 +8,8 @@ import Museum from './componenets/museum/Museum';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Game /> */}
-    <Calculator />
+    <Game />
+    {/* <Calculator /> */}
     {/* <Museum /> */}
   </React.StrictMode>,
   document.getElementById('root')

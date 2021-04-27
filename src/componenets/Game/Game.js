@@ -80,7 +80,15 @@ class Game extends React.Component {
             status = 'Winner: ' + winner;
         } else if (this.state.count === 0) {
             clearInterval(this.intervalId);
-            status = 'Winner: ' + (this.state.xIsNext ? "O" : "X");
+            // status = 'Winner: ' + (this.state.xIsNext ? "O" : "X");
+            this.setState({
+                history: [{
+                    squares: Array(9).fill(null),
+                }],
+                stepNumber: 0,
+                xIsNext: true,
+                count: 6
+            })
         } else {
             status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
         }
