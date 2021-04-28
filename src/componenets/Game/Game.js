@@ -25,7 +25,7 @@ class Game extends React.Component {
             if (this.state.count === 0) {
                 clearInterval(this.intervalId);
             }
-        }, 1000);
+        }, 2000);
     }
 
     handleClick(i) {
@@ -90,7 +90,7 @@ class Game extends React.Component {
                     xIsNext: true,
                     count: 6
                 })
-            }, 2000)
+            }, 1000)
         } else {
             status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
         }
