@@ -13,7 +13,8 @@ class Game extends React.Component {
             }],
             stepNumber: 0,
             xIsNext: true,
-            count: 6
+            count: 6,
+            isGameOver: true
         };
     };
 
@@ -23,12 +24,16 @@ class Game extends React.Component {
                 count: prevCount - 1
             }))
             if (this.state.count === 0) {
+                this.setState({
+                    isGameOver: false
+                })
                 clearInterval(this.intervalId);
             }
         }, 1000);
     }
 
     handleClick(i) {
+        if(this.state.isGameOver){
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[history.length - 1];
         const squares = current.squares.slice();
@@ -41,15 +46,16 @@ class Game extends React.Component {
 
         clearInterval(this.intervalId);
 
-        this.setState({
-            history: history.concat([{
+            this.setState({
+                history: history.concat([{
                 squares: squares,
-            }]),
-            stepNumber: history.length,
-            xIsNext: !this.state.xIsNext,
-            count: 6
-        }, this.countDown);
-
+                }]),
+                stepNumber: history.length,
+                xIsNext: !this.state.xIsNext,
+                count: 6,
+                isGameOver:true
+            }, this.countDown);
+        }
     }
 
     jumpTo(step) {
@@ -88,9 +94,10 @@ class Game extends React.Component {
                     }],
                     stepNumber: 0,
                     xIsNext: true,
-                    count: 6
+                    count: 6,
+                    isGameOver:true
                 })
-            }, 2000)
+            }, 4000)
         } else {
             status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
         }
